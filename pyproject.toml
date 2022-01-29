@@ -11,8 +11,8 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7"
-nixops = {git = "https://github.com/NixOS/nixops.git", rev = "master"}
+python = "^3.9"
+nixops = {git = "https://github.com/rdparker/nixops.git", rev = "master"}
 
 [tool.poetry.plugins."nixops"]
 nixos_modules_contrib = "nixos_modules_contrib.plugin"

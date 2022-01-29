@@ -1,26 +1,10 @@
 [[package]]
-name = "importlib-metadata"
-version = "3.4.0"
-description = "Read metadata from Python packages"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-typing-extensions = {version = ">=3.6.4", markers = "python_version < \"3.8\""}
-zipp = ">=0.5"
-
-[package.extras]
-docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
-testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "pytest-enabler", "packaging", "pep517", "pyfakefs", "flufl.flake8", "pytest-black (>=0.3.7)", "pytest-mypy", "importlib-resources (>=1.3)"]
-
-[[package]]
 name = "nixops"
 version = "2.0.0"
 description = "NixOS cloud provisioning and deployment tool"
 category = "main"
 optional = false
-python-versions = "^3.7"
+python-versions = "^3.9"
 develop = false
 
 [package.dependencies]
@@ -31,9 +15,9 @@ typing-extensions = "^3.7.4"
 
 [package.source]
 type = "git"
-url = "https://github.com/NixOS/nixops.git"
+url = "https://github.com/rdparker/nixops.git"
 reference = "master"
-resolved_reference = "ed2868fbc0b5924fcd4a60a8bd32a14fa196381b"
+resolved_reference = "f5abbe2ddd76dc4f21e654984b5125b46bc0baa6"
 
 [[package]]
 name = "pluggy"
@@ -42,9 +26,6 @@ description = "plugin and hook calling mechanisms for python"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-
-[package.dependencies]
-importlib-metadata = {version = ">=0.12", markers = "python_version < \"3.8\""}
 
 [package.extras]
 dev = ["pre-commit", "tox"]
@@ -59,7 +40,7 @@ python-versions = "*"
 
 [[package]]
 name = "typeguard"
-version = "2.10.0"
+version = "2.13.3"
 description = "Run-time type checker for Python"
 category = "main"
 optional = false
@@ -67,38 +48,22 @@ python-versions = ">=3.5.3"
 
 [package.extras]
 doc = ["sphinx-rtd-theme", "sphinx-autodoc-typehints (>=1.2.0)"]
-test = ["pytest", "typing-extensions"]
+test = ["pytest", "typing-extensions", "mypy"]
 
 [[package]]
 name = "typing-extensions"
-version = "3.7.4.3"
+version = "3.10.0.2"
 description = "Backported and Experimental Type Hints for Python 3.5+"
 category = "main"
 optional = false
 python-versions = "*"
 
-[[package]]
-name = "zipp"
-version = "3.4.0"
-description = "Backport of pathlib-compatible object wrapper for zip files"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.extras]
-docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
-testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "jaraco.test (>=3.2.0)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
-
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.7"
-content-hash = "659def32dd9f1aa5b8a13c5d349d8a2b133b33e99235175440794314517e9e40"
+python-versions = "^3.9"
+content-hash = "b13e48db4348ad2d62124656ecd341cdf5f919d356e50dd3a697409dac73a5b3"
 
 [metadata.files]
-importlib-metadata = [
-    {file = "importlib_metadata-3.4.0-py3-none-any.whl", hash = "sha256:ace61d5fc652dc280e7b6b4ff732a9c2d40db2c0f92bc6cb74e07b73d53a1771"},
-    {file = "importlib_metadata-3.4.0.tar.gz", hash = "sha256:fa5daa4477a7414ae34e95942e4dd07f62adf589143c875c133c1e53c4eff38d"},
-]
 nixops = []
 pluggy = [
     {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
@@ -110,15 +75,11 @@ prettytable = [
     {file = "prettytable-0.7.2.zip", hash = "sha256:a53da3b43d7a5c229b5e3ca2892ef982c46b7923b51e98f0db49956531211c4f"},
 ]
 typeguard = [
-    {file = "typeguard-2.10.0-py3-none-any.whl", hash = "sha256:a75c6d86ac9d1faf85c5ae952de473e5d26824dda6d4394ff6bc676849cfb939"},
-    {file = "typeguard-2.10.0.tar.gz", hash = "sha256:d830132dcd544d3f8a2a842ea739eaa0d7c099fcebb9dcdf3802f4c9929d8191"},
+    {file = "typeguard-2.13.3-py3-none-any.whl", hash = "sha256:5e3e3be01e887e7eafae5af63d1f36c849aaa94e3a0112097312aabfa16284f1"},
+    {file = "typeguard-2.13.3.tar.gz", hash = "sha256:00edaa8da3a133674796cf5ea87d9f4b4c367d77476e185e80251cc13dfbb8c4"},
 ]
 typing-extensions = [
-    {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},
-    {file = "typing_extensions-3.7.4.3-py3-none-any.whl", hash = "sha256:7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918"},
-    {file = "typing_extensions-3.7.4.3.tar.gz", hash = "sha256:99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c"},
-]
-zipp = [
-    {file = "zipp-3.4.0-py3-none-any.whl", hash = "sha256:102c24ef8f171fd729d46599845e95c7ab894a4cf45f5de11a44cc7444fb1108"},
-    {file = "zipp-3.4.0.tar.gz", hash = "sha256:ed5eee1974372595f9e416cc7bbeeb12335201d8081ca8a0743c954d4446e5cb"},
+    {file = "typing_extensions-3.10.0.2-py2-none-any.whl", hash = "sha256:d8226d10bc02a29bcc81df19a26e56a9647f8b0a6d4a83924139f4a8b01f17b7"},
+    {file = "typing_extensions-3.10.0.2-py3-none-any.whl", hash = "sha256:f1d25edafde516b146ecd0613dabcc61409817af4766fbbcfb8d1ad4ec441a34"},
+    {file = "typing_extensions-3.10.0.2.tar.gz", hash = "sha256:49f75d16ff11f1cd258e1b988ccff82a3ca5570217d7ad8c5f48205dd99a677e"},
 ]
