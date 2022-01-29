@@ -60,8 +60,8 @@ python-versions = "*"
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "b13e48db4348ad2d62124656ecd341cdf5f919d356e50dd3a697409dac73a5b3"
+python-versions = "^3.9, <3.11"
+content-hash = "3571f11aad69680617b14e22f7e77d41179d005d4e8e6b5f84954eb63a2d067c"
 
 [metadata.files]
 nixops = []
